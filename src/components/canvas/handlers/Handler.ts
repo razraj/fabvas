@@ -693,14 +693,18 @@ export default class Handler implements HandlerOptions {
       if (activeObject.superType === 'node') {
         if (activeObject.toPort) {
           if (activeObject.toPort.links.length) {
-            activeObject.toPort.links.forEach((link: any) => {})
+            activeObject.toPort.links.forEach((link: any) => {
+              // TODO
+            })
           }
           this.canvas.remove(activeObject.toPort)
         }
         if (activeObject.fromPort && activeObject.fromPort.length) {
           activeObject.fromPort.forEach((port: any) => {
             if (port.links.length) {
-              port.links.forEach((link: any) => {})
+              port.links.forEach((link: any) => {
+                // TODO
+              })
             }
             this.canvas.remove(port)
           })
@@ -718,14 +722,18 @@ export default class Handler implements HandlerOptions {
         if (obj.superType === 'node') {
           if (obj.toPort) {
             if (obj.toPort.links.length) {
-              obj.toPort.links.forEach((link: any) => {})
+              obj.toPort.links.forEach((link: any) => {
+                // TODO
+              })
             }
             this.canvas.remove(obj.toPort)
           }
           if (obj.fromPort && obj.fromPort.length) {
             obj.fromPort.forEach((port: any) => {
               if (port.links.length) {
-                port.links.forEach((link: any) => {})
+                port.links.forEach((link: any) => {
+                  // TODO
+                })
               }
               this.canvas.remove(port)
             })

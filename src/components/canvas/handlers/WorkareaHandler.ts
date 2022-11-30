@@ -130,7 +130,7 @@ class WorkareaHandler {
    * @returns
    */
   public setResponsiveImage = async (source: string | File, loaded?: boolean) => {
-    const imageFromUrl = async (src: string = '') => {
+    const imageFromUrl = async (src = '') => {
       return new Promise<WorkareaObject>((resolve) => {
         fabric.Image.fromURL(src, (img: any) => {
           const { canvas, workarea, editable } = this.handler

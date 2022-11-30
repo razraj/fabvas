@@ -204,7 +204,9 @@ class EventHandler {
    *
    * @param {FabricEvent} opt
    */
-  public rotating = (opt: FabricEvent) => {}
+  public rotating = (opt: FabricEvent) => {
+    // TODO
+  }
 
   /**
    * Rotated event object

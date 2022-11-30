@@ -42,9 +42,9 @@ export interface FabricCanvasOption {
   wrapperEl?: HTMLElement
 }
 
-export type FabricCanvas<T extends any = fabric.Canvas> = T & FabricCanvasOption
+export type FabricCanvas<T = fabric.Canvas> = T & FabricCanvasOption
 
-export type FabricObjectOption<T extends any = fabric.IObjectOptions> = T & {
+export type FabricObjectOption<T = fabric.IObjectOptions> = T & {
   /**
    * Object id
    * @type {string}
@@ -170,7 +170,7 @@ export type FabricObjectOption<T extends any = fabric.IObjectOptions> = T & {
   [key: string]: any
 }
 
-export type FabricObject<T extends any = fabric.Object> = T & FabricObjectOption
+export type FabricObject<T = fabric.Object> = T & FabricObjectOption
 
 export type FabricGroup = FabricObject<fabric.Group> & {
   /**
@@ -378,7 +378,7 @@ export interface KeyEvent {
 
 export type InteractionMode = 'selection' | 'grab' | 'line' | 'arrow' | 'crop'
 
-export interface FabricEvent<T extends any = Event> extends Omit<fabric.IEvent, 'e'> {
+export interface FabricEvent<T = Event> extends Omit<fabric.IEvent, 'e'> {
   e: T
   target?: FabricObject
   subTargets?: FabricObject[]

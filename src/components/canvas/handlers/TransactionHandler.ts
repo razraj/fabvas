@@ -44,7 +44,7 @@ class TransactionHandler {
   handler: Handler
   redos: TransactionEvent[]
   undos: TransactionEvent[]
-  active: boolean = false
+  active = false
   state: FabricObject[] = []
 
   constructor(handler: Handler) {
@@ -72,7 +72,7 @@ class TransactionHandler {
    * @param {*} [canvasJSON]
    * @param {boolean} [isWorkarea=true]
    */
-  public save = (type: TransactionType, canvasJSON?: any, _isWorkarea: boolean = true) => {
+  public save = (type: TransactionType, canvasJSON?: any, _isWorkarea = true) => {
     if (!this.handler.keyEvent.transaction) {
       return
     }
